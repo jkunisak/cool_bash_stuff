@@ -21,7 +21,7 @@ ncols () {
 
 # Add prefix to header line of TSV (useful when merging files)
 hprefix () {
-    bioawk -t -v prefix=$1 'NR==1{for(i=1; i<=NF; i++){$i=prefix"_"$i} print; exit}' $2
+	bioawk -t -v prefix=$1 'NR==1{for(i=1; i<=NF; i++){$i=prefix"_"$i} print; exit}' $2
 }
 
 # Convert 1-based table to 0-based bed file and add comment char to header line for compatability with things like tabix
